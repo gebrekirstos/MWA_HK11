@@ -1,18 +1,24 @@
 
-function Car(name:string){
-    this.name=name;
-    this.acceleration=0;
+class Car{
+    name: string;
+    acceleration:number=0;
+    constructor(name:string){
+        this.name=name;
 
-    
-    this.honk=function(){
-        console.log(` ${this.name} is saying Tooooooot!`);
-    };
-    this.accelerate=function(speed){
-        this.acceleration = this.acceleration + speed;
     }
-}
-var car = new Car("BMW");
+    honk(){
+        console.log('${this.name} is saying tooooooot!');
+
+    };
+    accelerate(speed){
+         this.acceleration=this.acceleration + speed;
+    }
+
+
+};
+
+var car= new Car("BMW");
 car.honk();
-console.log(car.acceletation);
+console.log(car.acceleration);
 car.accelerate(60);
 console.log(car.acceleration);

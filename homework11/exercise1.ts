@@ -1,3 +1,4 @@
+var money:number;
 let bankAccount={
     money:2000,
     deposit(value:number){
@@ -11,3 +12,5 @@ let myself ={
 };
 myself.bankAccount.deposit(3000);
 console.log(myself.hobbies);
+
+

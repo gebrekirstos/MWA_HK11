@@ -1,11 +1,22 @@
-const baseObject={
-    width: 0,
-    length:0
+class baseObject{
+    
+    width: number=0;
+    length:number=0;
+
+    constructor(width:number, length:number){
+        this.width=width;
+        this.length=length;
+    }
+    calSize(){
+        console.log(this.width * this.length);
+    }
 };
-const rectangle = Object.create(baseObject);
-rectangle.width=5;
-rectangle.length=2;
-rectangle.calcSize = function(){
-    return this.width * this.length;
-};
-console.log(rectangle.calcSize());
+class rectangle extends baseObject{
+    constructor(width:number,length:number){
+    super(width,length);
+    }
+
+}
+
+const myrec= new rectangle(5,2);
+console.log(myrec.calSize());
